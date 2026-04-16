@@ -1,4 +1,4 @@
-## 📌 Business Understanding
+##  Business Understanding
 
 ### 🔹 Problem Statement
 Predict whether a shipment will be delayed and identify the key factors that contribute to delivery delays.
