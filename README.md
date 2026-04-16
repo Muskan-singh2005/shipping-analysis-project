@@ -1,116 +1,112 @@
-# 🚚 Shipping Delay Prediction & Logistics Analysis
+# 🚚 Shipping Delay Prediction & Route Efficiency Dashboard
 
 ##  Project Overview
 
-This project focuses on analyzing e-commerce shipping data to **predict delivery delays** and uncover actionable insights that can improve logistics performance.
+This project presents a complete **data analytics and machine learning solution** to predict shipment delays and analyze logistics performance.
 
-By leveraging machine learning techniques, the system identifies high-risk shipments and helps businesses take proactive measures to ensure timely delivery.
-
----
-
-##  Business Understanding
-
-### 🔹 Problem Statement
-
-In the fast-growing e-commerce industry, delayed deliveries negatively impact customer satisfaction and operational efficiency.
-
-The objective of this project is to:
-
-* Predict whether a shipment will be delayed
-* Identify the key factors contributing to delays
+Along with building a predictive model, an **interactive Streamlit dashboard** is developed to visualize key metrics, route efficiency, and actionable business insights.
 
 ---
 
-### 🔹 Business Goals
+##  Business Problem
 
-This project aims to help logistics and e-commerce companies:
+In e-commerce logistics, delayed deliveries lead to:
 
-*  Reduce delivery delays
-*  Improve customer satisfaction
-*  Optimize shipping operations
-*  Identify high-risk shipments in advance
+* Poor customer satisfaction
+* Increased operational costs
+* Inefficient supply chain management
 
----
-
-##  Dataset & Features
-
-The dataset contains information related to:
-
-* Shipping mode
-* Product importance
-* Customer ratings
-* Discount offered
-* Product weight
-* Warehouse block
-
-These features are used to understand patterns behind delayed deliveries.
+This project aims to **predict delivery delays in advance** and provide insights to improve decision-making.
 
 ---
 
-##  Exploratory Data Analysis (EDA)
+##  Business Objectives
 
-Key observations from the data:
-
-*  **Heavier products** tend to have a higher chance of delay
-*  **Higher discounts** are often associated with delayed shipments
-*  **Shipping mode** significantly impacts delivery time
-*  Lower customer ratings correlate with delayed deliveries
+*  Reduce shipment delays
+*  Optimize route efficiency
+*  Identify bottlenecks in logistics
+*  Detect high-risk shipments early
 
 ---
 
-##  Machine Learning Approach
+##  Solution Approach
 
-The following steps were performed:
+### 🔹 Data Analysis (EDA)
 
-1. Data Cleaning & Preprocessing
-2. Feature Encoding
-3. Model Training & Evaluation
-4. Performance Comparison
+* Performed detailed exploratory data analysis
+* Identified patterns in:
+
+  * Shipping mode
+  * Product weight
+  * Discounts
+  * Warehouse distribution
 
 ---
 
-##  Model Performance
+### 🔹 Machine Learning Models
+
+Multiple models were trained and compared:
 
 | Model                     | Accuracy | F1 Score |
 | ------------------------- | -------- | -------- |
+| Logistic Regression       | 87%      | 0.86     |
+| Decision Tree             | 88%      | 0.87     |
 | K-Nearest Neighbors (KNN) | 90%      | 0.90     |
 
 ###  Best Model: KNN
 
-The KNN model achieved:
-
-* **90% Accuracy**
-* **F1 Score of 0.90**
-
-This indicates a strong balance between precision and recall, making it reliable for predicting both delayed and on-time shipments.
+* Achieved **90% Accuracy**
+* Balanced **F1 Score of 0.90**
+* Reliable prediction of delayed vs on-time shipments
 
 ---
 
-##  Confusion Matrix Insights
+##  Prediction System
 
-* Most shipments are correctly classified
-* Minimal misclassification between delayed and on-time deliveries
-* Model performs consistently across both classes
+A simple prediction system is integrated into the project:
 
----
+* Input features:
 
-##  Business Insights
+  * Product weight
+  * Discount offered
+  * Shipping mode
+* Output:
+   **Prediction: On-Time or Delayed Shipment**
 
-From the analysis, the following insights were derived:
-
-*  High discounts can increase the probability of delay
-*  Product weight plays a crucial role in delivery time
-*  Certain shipping modes are less efficient
-*  Early prediction can help prioritize critical shipments
+This makes the solution practical and usable for real-world scenarios.
 
 ---
 
-##  Future Improvements
+##  Interactive Dashboard (Streamlit)
 
-* Deploy the model using **Streamlit / Web App**
-* Integrate real-time shipment tracking
-* Use advanced models (Random Forest, XGBoost)
-* Build an interactive dashboard for business users
+A fully functional **Streamlit dashboard** is developed to make insights actionable.
+
+### 🔹 Key Features
+
+*  KPI Metrics (Total Orders, Avg/Min/Max Lead Time)
+*  Route Efficiency Analysis
+*  Top 10 Fastest Routes
+*  Top 10 Slowest Routes
+*  Ship Mode Performance
+*  Interactive Filters (Region, Shipping Mode)
+
+---
+
+##  Key Insights
+
+*  Heavier products are more likely to be delayed
+*  High discounts correlate with increased delays
+*  Shipping mode significantly affects delivery time
+*  Certain routes consistently perform better than others
+
+---
+
+##  Business Impact
+
+* Helps identify **high-risk shipments in advance**
+* Enables **better route and delivery planning**
+* Improves **customer satisfaction**
+* Supports **data-driven logistics optimization**
 
 ---
 
@@ -120,13 +116,44 @@ From the analysis, the following insights were derived:
 * Pandas, NumPy
 * Scikit-learn
 * Matplotlib, Seaborn
+* Streamlit
+
+---
+
+##  How to Run the Project
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+---
+
+##  Project Structure
+
+```
+app/
+data/
+src/
+README.md
+requirements.txt
+```
+
+---
+
+##  Future Enhancements
+
+* Deploy dashboard online (Streamlit Cloud)
+* Add real-time shipment tracking
+* Use advanced ML models (XGBoost, Random Forest)
+* Enhance UI/UX for better user experience
 
 ---
 
 ##  Conclusion
 
-This project demonstrates how machine learning can be used to **solve real-world logistics problems** by predicting delivery delays and providing actionable insights.
+This project demonstrates how **machine learning + data visualization** can be combined to solve real-world logistics problems.
 
-It highlights the importance of data-driven decision-making in improving operational efficiency and customer experience.
+The integration of an interactive dashboard transforms the solution into a **practical decision-support system**, making it highly valuable for businesses.
 
 ---
