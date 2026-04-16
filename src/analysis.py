@@ -2,9 +2,7 @@ import pandas as pd
 
 print("🚀 Analysis Started")
 
-# -------------------------------
-# Load Data
-# -------------------------------
+
 df = pd.read_csv("data/processed_data.csv")
 
 print("✅ Data Loaded")
@@ -13,9 +11,7 @@ print(df.head())
 print("\n📌 Columns in dataset:")
 print(df.columns)
 
-# -------------------------------
-# Route Analysis
-# -------------------------------
+
 route_analysis = df.groupby('Route').agg({
     'Lead Time': ['mean', 'count', 'std']
 }).reset_index()
@@ -40,18 +36,14 @@ route_analysis.to_csv("data/route_analysis.csv", index=False)
 
 print("\n✅ Analysis Completed!")
 
-# -------------------------------
-# Create Target Column (Delayed)
-# -------------------------------
+
 threshold = df['Lead Time'].mean()
 
 df['Delayed'] = df['Lead Time'].apply(lambda x: 1 if x > threshold else 0)
 
 print("\n✅ Target column 'Delayed' created")
 
-# -------------------------------
-# Machine Learning Model
-# -------------------------------
+
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.neighbors import KNeighborsClassifier
